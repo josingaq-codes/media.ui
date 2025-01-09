@@ -14,6 +14,7 @@ import {
 } from "@nextui-org/react";
 
 import { Icon } from "@iconify/react";
+import { LoaderIcon } from "lucide-react";
 
 export const ThemeDropdown = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -22,28 +23,20 @@ export const ThemeDropdown = () => {
 
   useEffect(() => {
     setMounted(true);
-    setKeys(new Set([theme!]));
-  }, [theme]);
+  }, []);
 
   return (
     <Dropdown>
       <DropdownTrigger>
-        {!mounted ? (
-          <Button color="primary" variant="flat" isIconOnly={true}>
-            <Icon
-              className="text-2xl animate-spinner-ease-spin"
-              icon="solar:refresh-bold-duotone"
-            />
-          </Button>
-        ) : (
-          <Button color="primary" variant="flat" isIconOnly={true}>
-            {resolvedTheme === "light" ? (
-              <Icon className="text-2xl" icon="solar:moon-stars-bold-duotone" />
-            ) : (
-              <Icon className="text-2xl" icon="solar:sun-bold-duotone" />
-            )}
-          </Button>
-        )}
+        <Button color="primary" variant="flat" isIconOnly={true}>
+          {!mounted ? (
+            <LoaderIcon size={24} className="animate-spinner-ease-spin" />
+          ) : resolvedTheme === "light" ? (
+            <Icon icon="solar:moon-bold" className="text-2xl" />
+          ) : (
+            <Icon icon="solar:sun-bold" className="text-2xl" />
+          )}
+        </Button>
       </DropdownTrigger>
       <DropdownMenu
         color="primary"

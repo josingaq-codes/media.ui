@@ -12,7 +12,7 @@ import { ThemeDropdown } from "./theme-dropdown";
 
 export const Header = () => {
   return (
-    <Navbar isBordered={true}>
+    <Navbar>
       <NavbarContent justify="start">
         <NavbarBrand>
           <Button

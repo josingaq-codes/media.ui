@@ -17,7 +17,7 @@ import { Icon } from "@iconify/react";
 import { LoaderIcon } from "lucide-react";
 
 export const ThemeDropdown = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [keys, setKeys] = useState<Selection>(new Set([theme!]));
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -31,10 +31,12 @@ export const ThemeDropdown = () => {
         <Button color="primary" variant="flat" isIconOnly={true}>
           {!mounted ? (
             <LoaderIcon size={24} className="animate-spinner-ease-spin" />
-          ) : resolvedTheme === "light" ? (
-            <Icon icon="solar:moon-bold" className="text-2xl" />
+          ) : theme === "light" ? (
+            <Icon icon="solar:sun-broken" className="text-2xl" />
+          ) : theme === "dark" ? (
+            <Icon icon="solar:moon-broken" className="text-2xl" />
           ) : (
-            <Icon icon="solar:sun-bold" className="text-2xl" />
+            <Icon icon="solar:monitor-broken" className="text-2xl" />
           )}
         </Button>
       </DropdownTrigger>

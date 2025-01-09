@@ -55,13 +55,13 @@ export const SignIn = () => {
               <button type="button" onClick={toggleVisibility}>
                 {isVisible ? (
                   <Icon
+                    icon="solar:eye-closed-broken"
                     className="pointer-events-none text-2xl text-default-400"
-                    icon="solar:eye-closed-linear"
                   />
                 ) : (
                   <Icon
+                    icon="solar:eye-broken"
                     className="pointer-events-none text-2xl text-default-400"
-                    icon="solar:eye-bold"
                   />
                 )}
               </button>

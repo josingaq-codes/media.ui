@@ -1,14 +1,14 @@
-interface PlayerProps {
+interface VideoPlayerProps {
   src: string;
   width?: string;
   height?: string;
 }
 
-export const Player = ({
+export const VideoPlayer = ({
   src,
   width = "100%",
   height = "500px",
-}: PlayerProps) => {
+}: VideoPlayerProps) => {
   return (
     <iframe
       src={src}

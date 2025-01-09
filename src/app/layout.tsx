@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 
+import { Providers } from "@/providers";
+
 import "@/styles/globals.css";
 
+import "@fontsource-variable/geist-mono";
+
 export const metadata: Metadata = {
-  title: "Media UI",
+  title: {
+    template: "%s | Media UI",
+    default: "Media UI",
+  },
 };
 
 interface RootLayoutProps {
@@ -12,11 +19,13 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

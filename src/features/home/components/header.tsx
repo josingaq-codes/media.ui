@@ -15,13 +15,21 @@ export const Header = () => {
     <Navbar isBordered={true}>
       <NavbarContent justify="start">
         <NavbarBrand>
-          <p className="font-bold text-inherit">MEDIA.UI</p>
+          <Button
+            as={Link}
+            href="/"
+            color="primary"
+            variant="light"
+            className="font-black text-base tracking-wide"
+          >
+            MEDIA.UI
+          </Button>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="/sign-in" variant="flat">
+          <Button as={Link} href="/sign-in" color="primary" variant="flat">
             Sign In
           </Button>
         </NavbarItem>

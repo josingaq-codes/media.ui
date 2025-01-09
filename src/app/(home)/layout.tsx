@@ -1,3 +1,4 @@
+import { Footer } from "@/features/home/components/footer";
 import { Header } from "@/features/home/components/header";
 
 interface HomeLayoutProps {
@@ -9,6 +10,7 @@ export default function HomeLayout({ children }: HomeLayoutProps) {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }

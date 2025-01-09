@@ -1,21 +1,34 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
-// import { VideoPlayer } from "@/components/video-player";
+"use client";
+
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Input,
+} from "@nextui-org/react";
 
 export const Home = () => {
   return (
-    <section>
-      <h1 className="text-center">Home</h1>
-      <ThemeSwitcher />
-      {/* <VideoPlayer
-        src="https://voe.sx/e/mtyqxbov2bc9"
-        width="100%"
-        height="500px"
-      />
-      <VideoPlayer
-        src="https://iframe.mediadelivery.net/embed/365724/b7cb85bc-a3a5-4d48-9de2-2e3ee12b34e9?autoplay=true&preload=true&responsive=true"
-        width="100%"
-        height="500px"
-      /> */}
+    <section className="top-0 fixed w-full h-dvh bg-[url('/bg-hero.jpg')] bg-cover bg-center">
+      <div className="z-10 w-full h-dvh flex justify-center items-center bg-white bg-opacity-5 dark:bg-black dark:bg-opacity-50">
+        <Card className="backdrop-blur backdrop-filter bg-opacity-0 p-2">
+          <CardHeader className="font-mono text-4xl uppercase text-white">
+            Unlimited movies, TV shows, and more
+          </CardHeader>
+          <CardBody className="text-center font-mono text-white">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </CardBody>
+          <CardFooter className="flex justify-between items-center gap-4">
+            <Input label="Email address" variant="flat" size="sm" />
+            <Button color="primary" size="lg">
+              Get Started
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
     </section>
   );
 };

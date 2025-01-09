@@ -16,21 +16,19 @@ export const Header = () => {
       <NavbarContent justify="start">
         <NavbarBrand>
           <Button
-            as={Link}
-            href="/"
             color="primary"
             variant="light"
             className="font-black text-base tracking-wide"
           >
-            MEDIA.UI
+            <Link href="/">MEDIA.UI</Link>
           </Button>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} href="/sign-in" color="primary" variant="flat">
-            Sign In
+          <Button color="primary" variant="flat">
+            <Link href="/sign-in">Sign In</Link>
           </Button>
         </NavbarItem>
         <NavbarItem>

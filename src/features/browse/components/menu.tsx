@@ -45,9 +45,9 @@ export const Menu = () => {
                   color="primary"
                   variant="flat"
                   startContent={
-                    <Icon icon="solar:home-angle-broken" className="text-4xl" />
+                    <Icon icon="solar:home-angle-broken" className="text-xl" />
                   }
-                  className="flex justify-start items-center gap-2 font-bold tracking-widest"
+                  className="flex justify-start items-center gap-2 tracking-wide font-bold"
                   onPress={onClose}
                 >
                   Home
@@ -58,10 +58,10 @@ export const Menu = () => {
                   startContent={
                     <Icon
                       icon="solar:clapperboard-play-broken"
-                      className="text-4xl"
+                      className="text-xl"
                     />
                   }
-                  className="flex justify-start items-center gap-2 tracking-widest"
+                  className="flex justify-start items-center gap-2 tracking-wide font-bold"
                   onPress={onClose}
                 >
                   Movies
@@ -70,9 +70,9 @@ export const Menu = () => {
                   color="primary"
                   variant="light"
                   startContent={
-                    <Icon icon="solar:display-broken" className="text-4xl" />
+                    <Icon icon="solar:display-broken" className="text-xl" />
                   }
-                  className="flex justify-start items-center gap-2 tracking-widest"
+                  className="flex justify-start items-center gap-2 tracking-wide font-bold"
                   onPress={onClose}
                 >
                   TV Shows
@@ -81,9 +81,9 @@ export const Menu = () => {
                   color="primary"
                   variant="light"
                   startContent={
-                    <Icon icon="solar:tv-broken" className="text-4xl" />
+                    <Icon icon="solar:tv-broken" className="text-xl" />
                   }
-                  className="flex justify-start items-center gap-2 tracking-widest"
+                  className="flex justify-start items-center gap-2 tracking-wide font-bold"
                   onPress={onClose}
                 >
                   Live TV
@@ -92,9 +92,9 @@ export const Menu = () => {
                   color="primary"
                   variant="light"
                   startContent={
-                    <Icon icon="solar:heart-broken" className="text-4xl" />
+                    <Icon icon="solar:heart-broken" className="text-xl" />
                   }
-                  className="flex justify-start items-center gap-2 tracking-widest"
+                  className="flex justify-start items-center gap-2 tracking-wide font-bold"
                   onPress={onClose}
                 >
                   Watch List

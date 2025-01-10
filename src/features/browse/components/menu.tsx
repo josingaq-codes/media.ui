@@ -47,10 +47,10 @@ export const Menu = () => {
                   startContent={
                     <Icon icon="solar:home-angle-broken" className="text-4xl" />
                   }
-                  className="flex justify-start items-center gap-2 font-bold"
+                  className="flex justify-start items-center gap-2 font-bold tracking-widest"
                   onPress={onClose}
                 >
-                  Browse
+                  Home
                 </Button>
                 <Button
                   color="primary"
@@ -61,7 +61,7 @@ export const Menu = () => {
                       className="text-4xl"
                     />
                   }
-                  className="flex justify-start items-center gap-2"
+                  className="flex justify-start items-center gap-2 tracking-widest"
                   onPress={onClose}
                 >
                   Movies
@@ -72,7 +72,7 @@ export const Menu = () => {
                   startContent={
                     <Icon icon="solar:display-broken" className="text-4xl" />
                   }
-                  className="flex justify-start items-center gap-2"
+                  className="flex justify-start items-center gap-2 tracking-widest"
                   onPress={onClose}
                 >
                   TV Shows
@@ -83,7 +83,7 @@ export const Menu = () => {
                   startContent={
                     <Icon icon="solar:tv-broken" className="text-4xl" />
                   }
-                  className="flex justify-start items-center gap-2"
+                  className="flex justify-start items-center gap-2 tracking-widest"
                   onPress={onClose}
                 >
                   Live TV
@@ -94,7 +94,7 @@ export const Menu = () => {
                   startContent={
                     <Icon icon="solar:heart-broken" className="text-4xl" />
                   }
-                  className="flex justify-start items-center gap-2"
+                  className="flex justify-start items-center gap-2 tracking-widest"
                   onPress={onClose}
                 >
                   Watch List

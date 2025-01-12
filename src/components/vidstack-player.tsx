@@ -18,12 +18,13 @@ import {
 import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 
-export const VidstackPlayer = () => {
+interface VidstackPlayerProps {
+  src: string;
+}
+
+export const VidstackPlayer = ({ src }: VidstackPlayerProps) => {
   return (
-    <MediaPlayer
-      title="Sprite Fight"
-      src="https://vpk1g9itdgtk.acek-cdn.com/hls2/01/02905/6a5bioyk9u3j_h/master.m3u8?t=GlFt6akpsVOqg_tO5kwJf3n2RyS20t7aMveQiNnMXR0&s=1736661505&e=129600&f=14527762&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn="
-    >
+    <MediaPlayer title="Sprite Fight" src={src}>
       <MediaProvider>
         <Track
           kind="subtitles"

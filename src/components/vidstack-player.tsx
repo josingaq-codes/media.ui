@@ -1,14 +1,6 @@
 "use client";
 
-import { MediaPlayer, MediaProvider, Track } from "@vidstack/react";
-
-// import {
-//   PlyrLayout,
-//   plyrLayoutIcons,
-// } from "@vidstack/react/player/layouts/plyr";
-
-// import "@vidstack/react/player/styles/base.css";
-// import "@vidstack/react/player/styles/plyr/theme.css";
+import { MediaPlayer, MediaProvider } from "@vidstack/react";
 
 import {
   defaultLayoutIcons,
@@ -19,20 +11,21 @@ import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 
 interface VidstackPlayerProps {
+  title: string;
   src: string;
 }
 
-export const VidstackPlayer = ({ src }: VidstackPlayerProps) => {
+export const VidstackPlayer = ({ title, src }: VidstackPlayerProps) => {
   return (
-    <MediaPlayer title="Sprite Fight" src={src}>
-      <MediaProvider>
-        <Track
-          kind="subtitles"
-          label="Spanish"
-          src="https://ycdcgnsocucu.acek-cdn.com/vtt/01/02905/6a5bioyk9u3j_spa.vtt"
-        />
-      </MediaProvider>
-      {/* <PlyrLayout icons={plyrLayoutIcons} /> */}
+    <MediaPlayer
+      title={title}
+      src={src}
+      playsInline={true}
+      autoPlay={true}
+      aspectRatio="16/9"
+      crossOrigin="anonymous"
+    >
+      <MediaProvider />
       <DefaultVideoLayout icons={defaultLayoutIcons} />
     </MediaPlayer>
   );

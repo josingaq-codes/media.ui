@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-// import { Skeleton } from "@nextui-org/skeleton";
-
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
 
 import {
@@ -26,16 +24,14 @@ export const VidstackPlayerPlyr = ({ title, src }: VidstackPlayerPlyrProps) => {
     setMounted(true);
   }, []);
 
-  // if (!mounted) {
-  //   return <Skeleton className="rounded-lg w-full h-[500px]" />;
-  // }
-
   return (
     <MediaPlayer
       title={title}
       src={src}
+      playsInline={true}
       autoPlay={true}
       aspectRatio="16/9"
+      crossOrigin="anonymous"
     >
       {mounted && (
         <>

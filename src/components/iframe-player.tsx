@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 export const VideoPlayer = ({
   src,
   width = "100%",
-  height = "500px",
+  height = "auto",
 }: VideoPlayerProps) => {
   return (
     <iframe
